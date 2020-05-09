@@ -1,0 +1,172 @@
+@import 'https://unicons.iconscout.com/release/v0.0.4/css/unicons.css';
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0px 0px 10px 3px rgba(255, 0, 0, 0.4),
+            0 0 0 8px #E6E6FA,
+            0 0 0 18px #9400D3;
+    }
+
+
+    25%,
+    75% {
+        box-shadow:
+            0px 0px 10px 8px rgba(255, 0, 0, 0.8),
+            0 0 0 8px #7FFFD4,
+            0 0 0 18px #FF1493;
+    }
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        background-image: radial-gradient(ellipse at center, #ff0505 10%, #960910 85%, #960910 85%);
+    }
+
+    10%,
+    90% {
+        background-image: radial-gradient(ellipse at center, #ff0505 20%, #960910 85%, #960910 85%);
+    }
+
+    20%,
+    80% {
+        background-image: radial-gradient(ellipse at center, #ff0505 30%, #960910 85%, #960910 85%);
+    }
+
+    30%,
+    70% {
+        background-image: radial-gradient(ellipse at center, #ff0505 40%, #960910 85%, #960910 85%);
+    }
+
+    40%,
+    60% {
+        background-image: radial-gradient(ellipse at center, #ff0505 50%, #960910 85%, #960910 85%);
+    }
+
+    50% {
+        background-image: radial-gradient(ellipse at center, #ff0505 60%, #960910 85%, #960910 85%);
+    }
+}
+
+@keyframes implode {
+    0% {
+        transform: scale(1);
+    }
+
+    20%,
+    40% {
+        transform: scale(10);
+    }
+
+    60%,
+    80% {
+        transform: scale(0.01);
+    }
+
+    80% {
+        transform: scale(0.01);
+        opacity: 1;
+        background: transparent;
+        /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9); */
+    }
+
+    100% {
+        transform: scale(0.01);
+        opacity: 0;
+        background: rgba;
+        /* box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.0); */
+    }
+
+}
+
+@keyframes flip {
+    0% {
+        transform: rotatex(0deg)
+    }
+
+
+    50% {
+        transform: rotatex(180deg)
+    }
+
+    100% {
+        transform: rotatex(360deg)
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes special {
+    10 {
+        transform: rotateY(7turn) translate(0px, -200px);
+
+    }
+
+    50% {
+        transform: rotateY(1turn) translate(2px, -100px);
+    }
+
+
+    100% {
+        transform: rotateY(5turn) translate(2px, -50px);
+    }
+
+}
+
+.doomsday {
+    /*    transform: rotateY(7turn) translate(0, -200px);*/
+    animation: pulse 2s infinite backwards, special 1.5s;
+}
+
+.doomsday.flip {
+    transform: rotateX(1turn);
+    transition: s;
+}
+
+.doomsday:before {
+    content: '';
+    display: block;
+    background-image: url('https://cdn.pixabay.com/photo/2016/05/27/11/12/heart-1419573_1280.png');
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    margin: auto;
+    opacity: 0;
+
+}
+
+
+
+
+
+.doomsday:hover {
+    animation: fadein 1s infinite backwards;
+
+}
+
+.doomsday:hover:before {
+    opacity: 1
+}
+
+
+.doomsday:active {
+    animation-name: flip, implode;
+    animation-duration: 0.7s, 5s;
+    animation-iteration-count: infinite, 1;
+    animation-delay: 0s, 3s;
+    animation-fill-mode: backwards, forwards;
+}
